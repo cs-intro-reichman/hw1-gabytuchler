@@ -12,7 +12,7 @@ public class FVCalc {
 		int futurevalueInt = (int) futurevalueDouble;
 		
 		System.out.println("After " + years + " years, $" + currentvalue + 
-                           " saved at " + ratepercent + "% will yield $" + 
+                           " saved at " + String.format("%.1f", rate) + "% will yield $" + 
                            futurevalueInt);
 
 		
