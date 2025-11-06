@@ -10,12 +10,15 @@ public class TimeFormat {
 
 		if (hours<13)
 		{
+
 			System.out.println(hours + ":" + minutes + " AM ");
 			
 		}
 		else {
+
 				int nighthours = hours-12;
 				System.out.println(nighthours + ":" + minutes + " PM ");
+				
 			}
 
 	}
