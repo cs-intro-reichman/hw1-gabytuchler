@@ -8,18 +8,20 @@ public class TimeFormat {
 		int hours = Integer.parseInt("" + args[0].charAt(0) + args[0].charAt(1));
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
 
-		if (hours<13)
-		{
-
-			System.out.println(hours + ":" + minutes + " AM ");
-			
+		String formattedMinutes = String.format("%02d", minutes);
+		if (hours == 0) {
+			System.out.println("0:" + formattedMinutes + " AM");
+		}
+		else if (hours == 12) {
+			System.out.println("12:" + formattedMinutes + " PM");
+		}
+		else if (hours > 12) {
+			int nighthours = hours - 12;
+			System.out.println(nighthours + ":" + formattedMinutes + " PM");
 		}
 		else {
-
-				int nighthours = hours-12;
-				System.out.println(nighthours + ":" + minutes + " PM ");
-				
-			}
+			System.out.println(hours + ":" + formattedMinutes + " AM");
+		}
 
 	}
 }
